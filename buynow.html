@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRIKART</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- header -->
+     <div class="header_container">
+        <div class="header">
+            <div class="header_title">
+                <h2>SRIKART</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- details -->
+
+    <H3>Fill the Detail below before buy:</H3>
+    <div class="form-group">
+        <form action="submit" method="POST">
+            <table>
+                <tr>
+                    <td><label>Name<span>*</span></label></td>
+                    <td><input type="text" name="customer_name" placeholder="Your Name" required></td>
+                </tr>
+                <tr>
+                    <td><label>DoB</label></td>
+                    <td><input type="date" name="dob" required></td>
+                </tr>
+                <tr>
+                    <td><label>Gender</label></td>
+                    <td><select>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="others">Others</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label>Email<span>*</span></label></td>
+                    <td><input type="email" required></td>
+                </tr>
+
+                <tr>
+                    <td><label>Mobile<span>*</span></label></td>
+                    <td><input type="tel" required></td>
+                </tr>
+            
+
+            </table>
+
+            <!-- address -->
+            <fieldset>
+                <legend>Delivery Address</legend>
+                <table id="address_table">
+                    <tr>
+                        <td><label>Door No.</label></td>
+                        <td><input type="text"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Street <span>*</span></label></td>
+                        <td><input type="text" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>City</label></td>
+                        <td><input type="text"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>State<span>*</span></label></td>
+                        <td> <input type="text" value="TamilNadu" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>PIN<span>*</span></label></td>
+                        <td><input type="text" required pattern="[0-9]{6}" placeholder="638453"></td>
+                    </tr>
+                    <tr>
+                        <td> <input type="checkbox" required > Are you above 18 years<span></span> *</span></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <div class="submit_form">
+                <input type="submit" value="Submit" >
+            </div>
+            
+        </form>
+
+        <div class="purchase">
+            <form>
+                <table>
+                    <tr>
+                        <td>Are you want to buy in our :</td>
+                        <td><input type="radio" name="store"> Online Store
+                            <br>
+                         <input type="radio" name="store"> Offline Store</td>
+                    </tr>
+
+                    <tr><td>
+                        Are you pay via EMI
+                    </td>
+                <td><input type="radio" name="Emi" i> Yes
+                <br><input type="radio" name="Emi" i> No</td></tr>
+
+                <tr>
+                    <td>Quantity </td>
+                    <td><input type="number" min="1"  max="5" value="1" required></td>
+                </tr>
+                <br>
+                <tr>
+                    <td>
+                        confirm your order 
+                    </td>
+                    <td>
+                        <input type="checkbox" name="confirm" id="" required>confirm
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" ><button id="place_order" >Place Order</button></td>
+                </tr>
+                </table>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>
